@@ -1,4 +1,4 @@
-const data = [
+export const data = [
     {
         "id": 1,
         "name": "Shirt One",
@@ -8,17 +8,35 @@ const data = [
         ],
         "imageUrl":"images/gray-shirt.jpg"
     },
+    {
+        "id": 2,
+        "name": "Shirt Two",
+        "price": "$15.00",
+        "colors": [
+            "gray", "red", "blue"
+        ],
+        "imageUrl":"images/red-shirt.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Shirt Three",
+        "price": "$15.00",
+        "colors": [
+            "gray", "red", "blue"
+        ],
+        "imageUrl":"images/blue-shirt.jpg"
+    },
 ]
 
 
 function onLoad(){
-    fetch()
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(data) {
-    createHtmlElements(data);
-  });
+//     fetch()
+//   .then(function(response) {
+//     return response.json();
+//   })
+//   .then(function(data) {
+//     createHtmlElements(data);
+//   });
   const parsedJSON = JSON.parse(data);
   createHtmlElements(data);
 }
